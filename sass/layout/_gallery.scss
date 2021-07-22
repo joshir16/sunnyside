@@ -1,0 +1,25 @@
+/** @format */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20rem, 1fr));
+
+  &__img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+    }
+    &--2 {
+      background-image: url(/images/desktop/image-gallery-orange.jpg);
+    }
+    &--3 {
+      background-image: url(/images/desktop/image-gallery-cone.jpg);
+    }
+    &--4 {
+      background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+    }
+  }
+}
