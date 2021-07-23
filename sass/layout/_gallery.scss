@@ -15,16 +15,33 @@
     background-repeat: no-repeat;
 
     &--1 {
-      background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+      background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+      }
     }
     &--2 {
-      background-image: url(/images/desktop/image-gallery-orange.jpg);
+      background-image: url(../images/desktop/image-gallery-orange.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-gallery-orange.jpg);
+      }
     }
     &--3 {
-      background-image: url(/images/desktop/image-gallery-cone.jpg);
+      background-image: url(../images/desktop/image-gallery-cone.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-gallery-cone.jpg);
+      }
     }
+
     &--4 {
-      background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+      background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-gallery-sugarcubes.jpg);
+      }
     }
   }
 }

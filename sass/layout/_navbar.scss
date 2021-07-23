@@ -1,58 +1,123 @@
 /** @format */
 
-.navigation {
-  position: absolute;
+.nav {
+  position: relative;
 
-  width: 100%;
-  height: 10rem;
-  z-index: 1000;
+  &_checkbox {
+    display: none;
+  }
 
-  padding: 3rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#nav__checkbox {
-  display: none;
-}
-
-.nav__label {
-  display: none;
+  &__logo {
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    z-index: 1000;
+  }
 }
 
 .navbar {
-  &__list {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  height: 4rem;
+
+  background-color: transparent;
+
+  border-radius: 0rem;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+
+  @media only screen and (max-width: $bp-small) {
+    top: 20rem;
+    left: 10%;
+    width: 80%;
+    height: 45vh;
+
+    display: none;
+    opacity: 0;
+    background-color: #fff;
+  }
+
+  &-list {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    font-family: "Barlow", sans-serif;
+
+    border-radius: none;
+    border: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  &--item {
-    list-style: none;
-    padding: 1rem 2rem;
-    margin: 0 1rem;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
 
-    &--selected {
-      border-radius: 10rem;
-      background-color: #fff;
+    &-item {
+      display: block;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      margin: 1.5rem;
+
+      &:not(:last-child) {
+        padding-right: 1.5rem;
+      }
+
+      &--selected {
+        background-color: #fff;
+        border-radius: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+          background-color: hsl(51, 100%, 49%);
+        }
+      }
+    }
+
+    &-link {
+      color: #fff;
+      transition: all 0.3s ease-in;
+      text-decoration: none;
+
+      @media only screen and (max-width: $bp-small) {
+        color: hsl(213, 9%, 39%);
+      }
+
+      &--selected {
+        color: #000;
+      }
     }
   }
+}
 
-  &--link {
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 100;
-    color: #fff;
-    font-family: "Barlow", sans-serif;
+.nav_burger {
+  position: fixed;
+  top: 2.7rem;
+  right: 2.5rem;
+  width: 5rem;
+  height: 4rem;
 
-    &--selected {
-      color: #000;
-    }
-  }
+  display: none;
+
+  z-index: 1001;
+  cursor: pointer;
 
   @media only screen and (max-width: $bp-small) {
-    display: none;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .nav_checkbox:checked ~ .navbar {
+    opacity: 1;
+    display: flex;
   }
 }
