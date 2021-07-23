@@ -6,6 +6,11 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 90vh repeat(3, 60vh) min-content 40vh min-content;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 90vh repeat(3, 100vh) min-content 40vh min-content;
+  }
 }
 
 // ----------------------------------------------------------
